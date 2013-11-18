@@ -1,0 +1,8 @@
+/*
+ * All your styles insert here
+ */
+ /*//////////////////GLOBAL//////////////////*/
+html, body, ul, li, ol, p {margin:0;padding:0;list-style:none;}
+.mainWrapper {width:1000px;height:800px;border:1px solid #f00; position:relative;margin:0 auto;}
+.header ul li {display:inline;}
+/*//////////////////ABOUT///////////////////*/
