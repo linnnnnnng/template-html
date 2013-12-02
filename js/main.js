@@ -1,4 +1,8 @@
-// SWFADDRESS handle function
+/*!
+ * 
+ * SWFAddress Handle here
+ *
+ */
 var title = document.title;
 var log = function(msg) {
 	var log = $('.log');
@@ -26,14 +30,23 @@ $.address.init(function(event) {
     
 }).change(function(event) {
 	log('change: ' + event.pathNames);
+	selectPage(event.pathNames, event.parameters.back);
+	
+	if(event.parameters.sample!=undefined){
+		$('.page2Output').html("Output "+event.parameters.sample)
+	}
 })
 
 
-// All your scripts insert here
+/*!
+ * 
+ * All your scripts insert here
+ * 
+ */
 $(function() {
-	//whatever you want to do put here
-	$('.fancybox').fancybox();
 	
+	//fancy box init
+	$('.fancybox').fancybox();
 	$(".fancyIframe").click(function() {
 		$.fancybox.open({
 			href : 'iframe.html',
@@ -42,5 +55,26 @@ $(function() {
 		});
 	});
 	
-
+	//nice scroll init
+	$(".scrollbar").niceScroll({autohidemode:true});
+	//below is to fix scrollbar auto hide issue when content is hide
+	$('.scrollbar').mouseenter(function() {
+		$(".scrollbar").getNiceScroll().doScrollPos(0,0);
+	});
 });
+
+function selectPage(selectedPage){
+	selectedPage=selectedPage==''?'home':selectedPage
+	var checkLink=selectedPage=='home'?'/':selectedPage
+	$('#navigation li').each(function(){
+		$(this).removeClass('selected');
+		var curRel=$(this).find('a').attr('rel');
+		if(curRel.substring(9,curRel.length-1)==checkLink){
+			$(this).addClass('selected');
+		}
+	});
+	$('.mainContent').each(function(){
+		$(this).hide();
+	});
+	$('.mainWrapper').find('#'+selectedPage).show();
+}

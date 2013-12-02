@@ -11,50 +11,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link rel="shortcut icon" href="icon.png" type="image/png">
-	
-	<!-- Always update this url with the latest jquery version -->
-	<script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.js'></script>	
-	
-	<!-- Add fancyBox main JS and CSS files -->
-	<script type="text/javascript" src="js/vendor/jquery.fancybox.js?v=2.1.5"></script>
+    <!-- Add fancyBox CSS -->
 	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
-	
-    <!-- Add SWFAddress JS and CSS files -->
-    <script src="js/vendor/jquery.address-1.5.min.js?tracker=track"></script>
-    
-    <script type='text/javascript' src='js/plugins.js'></script>
-	<script type='text/javascript' src='js/main.js'></script>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">	
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 
 <body>
 	<div class="mainWrapper">
 		<div class="header">
-			<h1>Masthead</h1>
-			<ul>
-				<li><a href="/" rel="address:/">Home</a></li>
-                <li><a href="/profile/" rel="address:/profile/">Profile</a></li>
-                <li><a href="/contact/" rel="address:/contact/">Contact</a></li>
-			</ul>
-		</div><!-- header ends here -->
-		
-		<div class="midContent">			
-			<p>
+        	<div id="navigation">
+                <ul>
+                    <li><a href="/" rel="address:/">Home</a></li>
+                    <li><a href="/page1/" rel="address:/page1/">Page 1</a></li>
+                    <li><a href="/page2/" rel="address:/page2/">Page 2</a></li>
+                    <li><a href="/page3/" rel="address:/page3/">Page 3</a></li>
+                </ul>
+            </div>
+		</div>
+        
+        <div id="home" class="mainContent">
+        	<h2>Home</h2>
+        	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+        
+        <div id="page1" class="mainContent">
+        	<h2>Page 1</h2>
+        	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            <div class="gallery">
+            	<h5>Fancybox Sample</h5>
 				<a class="fancybox" href="images/1_b.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet">
 					<img src="images/1_s.jpg" alt="" />
-				</a><br/>
+				</a><br/><br/>
 				<a class="fancybox" href="images/2_b.jpg" data-fancybox-group="gallery" title="">
-					Image 2
-				</a><br/>
+					Open Image 2
+				</a><br/><br/>
 				<a class="fancyIframe" href="javascript:;">Overlay with fancybox</a>
-			</p>	
-		</div><!-- midContent ends here -->
-		
-		<div class="footer">
-			Copyright 2013
-		</div><!-- footer ends here -->
-	</div><!-- mainWrapper ends here -->
+			</div>
+        </div>
+        
+        <div id="page2" class="mainContent">
+        	<h2>Page 2</h2>
+        	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            <h5>SWFAddress Deeplink</h5>
+            <a href="/page2/?sample=1" rel="address:/page2/?sample=1">Sample 1</a><br />
+            <a href="/page2/?sample=2" rel="address:/page2/?sample=2">Sample 2</a>
+            <div class="page2Output"></div>
+        </div>
+        
+        <div id="page3" class="mainContent">
+        	<h2>Page 3</h2>
+        	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            <h5></h5>
+            <div class="scrollbar">
+            	<div class="scrollcontent">
+                	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+            </div>
+        </div>
+	</div>
+	
+    <!-- Always update this url with the latest jquery version -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.js"><\/script>')</script>
+    <!-- Add fancyBox main JS -->
+	<script type="text/javascript" src="js/vendor/jquery.fancybox.js?v=2.1.5"></script>
+	<!-- Add SWFAddress JS -->
+    <script src="js/vendor/jquery.address-1.5.min.js?tracker=track"></script>
+    <!-- Add Nice Scrollbar -->
+    <script src="js/vendor/jquery.nicescroll.min.js"></script>
+    
+	<script type='text/javascript' src='js/plugins.js'></script>
+	<script type='text/javascript' src='js/main.js'></script>
 	
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 	<script>

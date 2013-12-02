@@ -3,6 +3,19 @@
  */
  /*//////////////////GLOBAL//////////////////*/
 html, body, ul, li, ol, p {margin:0;padding:0;list-style:none;}
-.mainWrapper {width:1000px;height:800px;border:1px solid #f00; position:relative;margin:0 auto;}
+.mainWrapper {width:800px;height:800px;position:relative;margin:0 auto;}
 .header ul li {display:inline;}
-/*//////////////////ABOUT///////////////////*/
+body{font-family:Arial, Helvetica, sans-serif; font-size:14px;}
+a{color:#666;text-decoration:none;}
+a:hover{color:#666;text-decoration:underline;}
+
+#navigation{width:300px;margin:auto;}
+#navigation ul{margin:0;padding:0;list-style:none;}
+#navigation li{float:left;margin:20px 10px;}
+#navigation li a{color:#999;text-decoration:none;}
+#navigation li a:hover, #navigation li.selected a{color:#666;text-decoration:underline;}
+
+.mainContent{clear:both;color:#666;}
+.gallery{margin:20px 0;}
+.page2Output{margin:20px 0;}
+.scrollbar{width:500px;height:300px;overflow:scroll;}
