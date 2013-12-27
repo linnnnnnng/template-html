@@ -44,7 +44,6 @@ $.address.init(function(event) {
  * 
  */
 $(function() {
-	
 	//fancy box init
 	$('.fancybox').fancybox();
 	$(".fancyIframe").click(function() {
@@ -65,16 +64,20 @@ $(function() {
 
 function selectPage(selectedPage){
 	selectedPage=selectedPage==''?'home':selectedPage
-	var checkLink=selectedPage=='home'?'/':selectedPage
+	var pageCheck=selectedPage=='home'?'/':selectedPage
+	var pageExist=false
 	$('#navigation li').each(function(){
 		$(this).removeClass('selected');
 		var curRel=$(this).find('a').attr('rel');
-		if(curRel.substring(9,curRel.length-1)==checkLink){
+		if(curRel.substring(9,curRel.length-1)==pageCheck){
 			$(this).addClass('selected');
+			pageExist=true
 		}
 	});
-	$('.mainContent').each(function(){
-		$(this).hide();
-	});
-	$('.mainWrapper').find('#'+selectedPage).show();
+	if(pageExist){
+		$('.mainContent').each(function(){
+			$(this).hide();
+		});
+		$('.mainWrapper').find('#'+selectedPage).show();
+	}
 }
