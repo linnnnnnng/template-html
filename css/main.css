@@ -2,6 +2,7 @@
  * All your styles insert here
  */
 html, body, ul, li, ol, p {margin:0;padding:0;list-style:none;}
+html{-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-user-select: none;-webkit-touch-callout:none;}
 .mainWrapper {width:800px;height:800px;position:relative;margin:0 auto;}
 .header ul li {display:inline;}
 body{font-family:Arial, Helvetica, sans-serif; font-size:14px;}
