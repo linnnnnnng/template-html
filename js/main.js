@@ -4,18 +4,10 @@
  *
  */
 var title = document.title;
-var log = function(msg) {
-	var log = $('.log');
-	if (!log.size()) {
-		//log = $('<div class="log" />').appendTo('.footer');
-	}
-	log.append(msg.replace(/^([^:]*):(.*)$/, '<p><b>$1:</b> <span class="$1">$2</span></p>'))
-		.attr({scrollTop: log.attr('scrollHeight')})
-		.find('p:nth-child(even)').addClass('even');
-};
 var track = function() {
-	log('track: ' + arguments[0]);
+	//console.log('track: ' + arguments[0]);
 };
+// Serialization utility
 var serialize = function(obj, re) {
 	var result = [];
 	$.each(obj, function(i, val) {
@@ -25,13 +17,13 @@ var serialize = function(obj, re) {
 	});
 	return '{' + result.join(', ') + '}';
 };
-
 $.address.init(function(event) {
     
 }).change(function(event) {
-	log('change: ' + event.pathNames);
-	selectPage(event.pathNames, event.parameters.back);
+	//console.log('change: ' + serialize(event, /parameters|parametersNames|path|pathNames|queryString|value/));
+	goPage(event.pathNames);
 	
+	//output sub pages
 	if(event.parameters.sample!=undefined){
 		$('.page2Output').html("Output "+event.parameters.sample)
 	}
@@ -62,22 +54,27 @@ $(function() {
 	});
 });
 
-function selectPage(selectedPage){
-	selectedPage=selectedPage==''?'home':selectedPage
-	var pageCheck=selectedPage=='home'?'/':selectedPage
-	var pageExist=false
+function goPage(sPage){
+	sPage=sPage==''?'home':sPage;
+	var pageCheck=sPage=='home'?'/':sPage;
+	
 	$('#navigation li').each(function(){
+		//remove highlighted class
 		$(this).removeClass('selected');
+		
+		//grab navigation address
 		var curRel=$(this).find('a').attr('rel');
-		if(curRel.substring(9,curRel.length-1)==pageCheck){
+		//remove address:/
+		curRel=curRel.substring(9,curRel.length-1);
+		//check page exist
+		if(curRel==pageCheck){
+			//add highlight class
 			$(this).addClass('selected');
-			pageExist=true
+			//toggle contens
+			$('.mainContent').each(function(){
+				$(this).hide();
+			});
+			$('.mainWrapper').find('#'+sPage).show();
 		}
 	});
-	if(pageExist){
-		$('.mainContent').each(function(){
-			$(this).hide();
-		});
-		$('.mainWrapper').find('#'+selectedPage).show();
-	}
 }
