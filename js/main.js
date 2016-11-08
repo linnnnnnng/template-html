@@ -29,7 +29,6 @@ $.address.init(function(event) {
 	}
 })
 
-
 /*!
  * 
  * All your scripts insert here
@@ -37,25 +36,9 @@ $.address.init(function(event) {
  */
 var isTablet, isMobile;
 $(function() {
-	//fancy box init
-	$('.fancybox').fancybox();
-	$(".fancyIframe").click(function() {
-		$.fancybox.open({
-			href : 'iframe.html',
-			type : 'iframe',
-			padding : 5
-		});
-	});
-	
-	//nice scroll init
-	$(".scrollbar").niceScroll({autohidemode:true});
-	//below is to fix scrollbar auto hide issue when content is hide
-	$('.scrollbar').mouseenter(function() {
-		$(".scrollbar").getNiceScroll().doScrollPos(0,0);
-	});
+	console.log( "ready!" );
 	
 	isTablet = (/ipad|android|android 3.0|xoom|sch-i800|playbook|tablet|kindle/i.test(navigator.userAgent.toLowerCase()));
-	
 	//mobile and tablet detection
 	if($.browser.mobile || isTablet){
 		//if is mobile or tablet

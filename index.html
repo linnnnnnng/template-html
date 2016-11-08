@@ -1,113 +1,102 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title></title>
-	<meta name="description" content="">
-	<meta property="og:title" content=""/>
-	<meta property="og:url" content="http://example.com"/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:image" content="images/fbshare.jpg"/>
-    <meta name="viewport" content="width=device-width">
-    <script>
-    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-        var msViewportStyle = document.createElement("style");
-        msViewportStyle.appendChild(
-            document.createTextNode(
-                "@-ms-viewport{width:device-width}"
-            )
-        );
-        document.getElementsByTagName("head")[0].
-            appendChild(msViewportStyle);
-    }
-    </script>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Website Name</title>
     
-    <link rel="shortcut icon" href="icon.png" type="image/png">
-    <!-- Add fancyBox CSS -->
-	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-</head>
+        <meta name="Title" content="Website Name" />
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        
+        <!-- for Facebook -->
+        <meta property="og:title" content="Website Name"/>
+        <meta property="og:site_name" content="Website Name"/>
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:description" content="">
+        
+        <!-- for Twitter -->
+        <meta name="twitter:title" content="Website Name" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:image" content="" />
+        
+        <meta name="viewport" content="width=device-width">
+		<script>
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement("style");
+            msViewportStyle.appendChild(
+                document.createTextNode(
+                    "@-ms-viewport{width:device-width}"
+                )
+            );
+            document.getElementsByTagName("head")[0].
+                appendChild(msViewportStyle);
+        }
+        </script>
 
-<body>
-	<div class="mainWrapper">
-		<div class="header">
-        	<div id="navigation">
-                <ul>
-                    <li><a href="/" rel="address:/">Home</a></li>
-                    <li><a href="/page1/" rel="address:/page1/">Page 1</a></li>
-                    <li><a href="/page2/" rel="address:/page2/">Page 2</a></li>
-                    <li><a href="/page3/" rel="address:/page3/">Page 3</a></li>
-                </ul>
-            </div>
-		</div>
-        
-        <div id="home" class="mainContent">
-        	<h2>Home</h2>
-        	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </div>
-        
-        <div id="page1" class="mainContent">
-        	<h2>Page 1</h2>
-        	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            <div class="gallery">
-            	<h5>Fancybox Sample</h5>
-				<a class="fancybox" href="images/1_b.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet">
-					<img src="images/1_s.jpg" alt="" />
-				</a><br/><br/>
-				<a class="fancybox" href="images/2_b.jpg" data-fancybox-group="gallery" title="">
-					Open Image 2
-				</a><br/><br/>
-				<a class="fancyIframe" href="javascript:;">Overlay with fancybox</a>
-			</div>
-        </div>
-        
-        <div id="page2" class="mainContent">
-        	<h2>Page 2</h2>
-        	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            <h5>SWFAddress Deeplink</h5>
-            <a href="/page2/?sample=1" rel="address:/page2/?sample=1">Sample 1</a><br />
-            <a href="/page2/?sample=2" rel="address:/page2/?sample=2">Sample 2</a>
-            <div class="page2Output"></div>
-        </div>
-        
-        <div id="page3" class="mainContent">
-        	<h2>Page 3</h2>
-        	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            <h5></h5>
-            <div class="scrollbar">
-            	<div class="scrollcontent">
-                	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        <link rel="shortcut icon" href="icon.ico" type="image/ico">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="notsupport">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="mainWrapper">
+            <div class="header">
+                <div id="navigation">
+                    <ul>
+                        <li><a href="/" rel="address:/">Home</a></li>
+                        <li><a href="/page1/" rel="address:/page1/">Page 1</a></li>
+                        <li><a href="/page2/" rel="address:/page2/">Page 2</a></li>
+                    </ul>
                 </div>
             </div>
+            
+            <div id="home" class="mainContent">
+                <h2>Home</h2>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                <div id="anime">Move Right</div>
+            </div>
+            
+            <div id="page1" class="mainContent">
+                <h2>Page 1</h2>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </div>
+            
+            <div id="page2" class="mainContent">
+                <h2>Page 2</h2>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </div>
         </div>
-	</div>
-	
-    <!-- Always update this url with the latest jquery version -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.js"><\/script>')</script>
-    <!-- Add fancyBox main JS -->
-	<script type="text/javascript" src="js/vendor/jquery.fancybox.js?v=2.1.5"></script>
-    <!-- Add MOBILE DETECT JS -->
-    <script src="js/vendor/detectmobilebrowser.js"></script>
-	<!-- Add SWFAddress JS -->
-    <script src="js/vendor/jquery.address-1.5.min.js?tracker=track"></script>
-    <!-- Add Nice Scrollbar -->
-    <script src="js/vendor/jquery.nicescroll.min.js"></script>
-    
-	<script type='text/javascript' src='js/plugins.js'></script>
-	<script type='text/javascript' src='js/main.js'></script>
-	
-	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-	<script>
-		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-		e.src='//www.google-analytics.com/analytics.js';
-		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-		ga('create','UA-XXXXX-X');ga('send','pageview');
-	</script>
-</body>
+        
+        <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
+        
+        <!-- Add MOBILE DETECT JS -->
+        <script src="js/vendor/detectmobilebrowser.js"></script>
+        <!-- Add SWFAddress JS -->
+		<script src="js/vendor/jquery.address-1.5.min.js?tracker=track"></script>
+        
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
 </html>
 <!-- Monster Template 10 April 2014 -->
