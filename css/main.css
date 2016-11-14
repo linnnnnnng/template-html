@@ -87,6 +87,9 @@ a:hover{color:#666;text-decoration:underline;}
 .fitImg img{ width:100%; height:auto;}
 .ignorePadding{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 
+input:required, textarea:required {box-shadow:none;}
+input:invalid, textarea:required {box-shadow:none;}
+
 @-webkit-viewport{width:device-width}
 @-moz-viewport{width:device-width}
 @-ms-viewport{width:device-width}
